@@ -1,11 +1,15 @@
-import Image from "next/image";
+import NoteList from "../../components/NoteList/NoteList";
+import { getNotes } from "../../lib/api";
 
-const Notes = () => {
-    return <div>
-        <p>Notes</p>
-        <Image src="/window.svg" alt="ddd" width={500} height={500}/>
-    
-        </div>
+const Notes = async () => {
+  const response = await getNotes();
+
+  return (
+    <section>
+      <h1>Notes List</h1>
+      {response?.notes?.length > 0 && <NoteList notes={response.notes} />}
+    </section>
+  );
 }
 
 export default Notes;

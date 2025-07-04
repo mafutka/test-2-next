@@ -4,7 +4,10 @@ import Link from 'next/link';
 const Header = () => {
   return (
     <header className={css.header}>
+   <div className={css.headermenu}>
+    <Link href={'/'}>
       <h2>NoteHub</h2>
+    </Link>
       <nav>
         <ul className={css.navigation}>
           <li>
@@ -21,6 +24,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+      </div>
     </header>
   );
 };

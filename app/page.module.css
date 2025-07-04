@@ -27,9 +27,16 @@
   }
 }
 
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .main {
   display: flex;
   flex-direction: column;
+   flex: 1;
   gap: 32px;
   grid-row-start: 2;
 }
@@ -106,6 +113,22 @@ a.secondary {
 
 .footer img {
   flex-shrink: 0;
+}
+
+.notelist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+
+}
+
+.notestitle {
+  color: aquamarine;
+  font-size: 60;
+  padding-bottom: 24px;
 }
 
 /* Enable hover only on non-touch devices */
